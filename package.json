@@ -1,0 +1,49 @@
+{
+  "name": "qits-network-access-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The network-access frontend: one Angular page where a signed-in person lists the devices and nodes on the platform's private network, adds a device (its WireGuard keys made in the browser), downloads its config or scans it as a QR code, and revokes it. It ships no image — qits-network-access-service serves it via Quinoa at the root of its own host.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuicklyIterateTheSoftware/qits-network-access-frontend.git"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint"
+  },
+  "dependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "@qits/angular": "2026.1116.150632",
+    "qrcode-generator": "2.0.4",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-eslint/builder": "^21.4.0",
+    "@angular/build": "^21.2.6",
+    "@angular/cli": "^21.2.6",
+    "@angular/compiler-cli": "^21.2.0",
+    "@eslint/js": "^10.0.1",
+    "@ngrx/signals": "^21.1.1",
+    "@pact-foundation/pact": "17.1.4",
+    "@qits/network-access-golden-masters": "2026.1114.182344",
+    "@types/node": "^20.19.43",
+    "angular-eslint": "^21.4.0",
+    "eslint": "^10.8.0",
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.59.2",
+    "vitest": "^4.0.8"
+  }
+}

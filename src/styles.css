@@ -1,0 +1,100 @@
+/* The page's few colours, light and dark. Nothing here comes from a design system on purpose: this
+   frontend carries no @qits/ui-components (qits-2361), so a person off the tunnel loads one page
+   and nothing else. */
+:root {
+  color-scheme: light dark;
+  --bg: #f7f7f8;
+  --surface: #ffffff;
+  --fg: #1b1c1f;
+  --fg-soft: #3d4048;
+  --fg-muted: #676b75;
+  --line: #d9dbe0;
+  --code-bg: #eef0f3;
+  --chip-bg: #eef0f3;
+  --accent: #2557d6;
+  --accent-bg: #e5ecfb;
+  --ok: #17703a;
+  --ok-bg: #e3f4e8;
+  --danger: #b42318;
+  --danger-bg: #fbe8e6;
+  --warning-line: #d9a400;
+  --warning-bg: #fff6d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141519;
+    --surface: #1d1f24;
+    --fg: #ececef;
+    --fg-soft: #c8cad1;
+    --fg-muted: #9a9ea8;
+    --line: #34373f;
+    --code-bg: #272a31;
+    --chip-bg: #272a31;
+    --accent: #8aa9ff;
+    --accent-bg: #23305a;
+    --ok: #6fd697;
+    --ok-bg: #173523;
+    --danger: #ff8a7f;
+    --danger-bg: #3d1c19;
+    --warning-line: #8a6d00;
+    --warning-bg: #2f2709;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font:
+    0.875rem/1.5 system-ui,
+    sans-serif;
+}
+
+code {
+  font-family: ui-monospace, monospace;
+}
+
+button {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+button.success {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+button.danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+input {
+  width: 16rem;
+  max-width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+}

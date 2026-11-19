@@ -1,0 +1,4 @@
+# Generated: the hey-api client and the pact the pact spec writes.
+src/app/api/
+pacts/
+package-lock.json

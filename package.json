@@ -1,6 +1,6 @@
 {
   "name": "qits-network-access-frontend",
-  "version": "2026.1123.82616",
+  "version": "2026.1123.202411",
   "private": true,
   "description": "The network-access frontend: one Angular page where a signed-in person lists the devices and nodes on the platform's private network, adds a device (its WireGuard keys made in the browser), downloads its config or scans it as a QR code, and revokes it. It ships no image — qits-network-access-service serves it via Quinoa at the root of its own host.",
   "license": "MIT",

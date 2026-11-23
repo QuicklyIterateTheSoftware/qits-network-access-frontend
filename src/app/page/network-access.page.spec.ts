@@ -281,6 +281,14 @@ describe('NetworkAccessPage', () => {
         ].some((part) => part.includes(FIXED_WIREGUARD_KEYS.privateKey)),
       );
 
+    it('notes that configs no longer keep a keepalive, and how to drop it from an older device', async () => {
+      await render();
+      const note = section().querySelector('[data-keepalive-note]');
+      expect(note?.textContent).toContain('no longer keep the tunnel awake with a keepalive');
+      expect(note?.textContent).toContain('clear Persistent keepalive');
+      expect(note?.textContent).toContain('PersistentKeepalive');
+    });
+
     it('sends the name and the public key, then shows the config once with the private key', async () => {
       await render();
       expect(button('Add', section())?.disabled).toBe(true);

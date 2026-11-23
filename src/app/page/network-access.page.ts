@@ -93,6 +93,8 @@ type PrivateEdgeRead =
  * - Download WireGuard config on an ACTIVE DEVICE row reads the peer's `wg-quick` text
  *   (`PEER_CONFIG`'s `fetch`) and saves it as `qits.conf`, the `<PRIVATE_KEY>` placeholder kept: an
  *   existing device's key is not the page's.
+ * - Add device's heading carries a standing note (`data-keepalive-note`) that configs no longer
+ *   set a keepalive, and how to drop it from a device added before the cutover.
  * - Add device, for a phone or a laptop without the CLI, while a private edge is announced: a name
  *   the service takes (`isDeviceName`, checked as typed), then the browser makes an X25519 keypair
  *   (`WIREGUARD_KEYS`, WebCrypto), `creating` (`PEER_CREATE`) sends the name and the public key and
@@ -170,6 +172,12 @@ type PrivateEdgeRead =
 
       <section class="card" aria-labelledby="add-heading" data-add-device>
         <h2 id="add-heading">Add device</h2>
+        <p class="muted small" role="note" data-keepalive-note>
+          Configs no longer keep the tunnel awake with a keepalive, which drained phone batteries.
+          A device added before 24 Nov 2026 still sends one every 25 s: in the WireGuard app, edit
+          the tunnel and clear Persistent keepalive, or revoke the device and add it again. On
+          Linux, delete the <code>PersistentKeepalive</code> line from <code>qits.conf</code>.
+        </p>
         @if (added(); as device) {
           <div data-device-config>
             <p class="soft">

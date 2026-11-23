@@ -174,9 +174,9 @@ type PrivateEdgeRead =
         <h2 id="add-heading">Add device</h2>
         <p class="muted small" role="note" data-keepalive-note>
           Configs no longer keep the tunnel awake with a keepalive, which drained phone batteries.
-          A device added before 24 Nov 2026 still sends one every 25 s: in the WireGuard app, edit
-          the tunnel and clear Persistent keepalive, or revoke the device and add it again. On
-          Linux, delete the <code>PersistentKeepalive</code> line from <code>qits.conf</code>.
+          A device added earlier may still send one every 25 s: in the WireGuard app, edit the
+          tunnel and clear Persistent keepalive, or revoke the device and add it again. On Linux,
+          delete the <code>PersistentKeepalive</code> line from <code>qits.conf</code>.
         </p>
         @if (added(); as device) {
           <div data-device-config>

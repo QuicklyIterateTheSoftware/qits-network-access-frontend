@@ -148,7 +148,8 @@
             "combine": "AND",
             "matchers": [
               {
-                "match": "type"
+                "match": "regex",
+                "regex": "^/network-access/api/peers/00000000-0000-4000-8000-000000000001/config$"
               }
             ]
           }
@@ -231,7 +232,8 @@
             "combine": "AND",
             "matchers": [
               {
-                "match": "type"
+                "match": "regex",
+                "regex": "^/network-access/api/peers/00000000-0000-4000-8000-000000000001/revoke$"
               }
             ]
           }
@@ -315,7 +317,8 @@
             "combine": "AND",
             "matchers": [
               {
-                "match": "type"
+                "match": "regex",
+                "regex": "^/network-access/api/peers/00000000-0000-4000-8000-000000000001/app-config$"
               }
             ]
           }
